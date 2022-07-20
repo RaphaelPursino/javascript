@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Capturando valores</h1>
+    Digite seu nome: <input type="text" name="texto" id="texto">
+    <input type="button" value="Confirmar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+
+        function calcular() {
+            var nome = document.getElementById('texto').value
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Seu nome é ${nome}!</p>`
+
+            if (nome == 'Raphael') {
+                res.innerHTML += '<p>Parabéns você foi premiado</p>'
+            } else {
+                res.innerHTML += '<p>Você não foi premiado</p>'
+            }
+
+        
+        }
+        
+    </script>
+</body>
+</html>
