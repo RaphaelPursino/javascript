@@ -5,12 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
+    <style>
+        body {
+            background: rgb(0,30,158);
+            background: radial-gradient(circle, rgba(0,30,158,1) 0%, rgba(1,10,136,1) 48%, rgba(0,5,75,1) 100%);
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 3em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+
+
+        div#container {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(0, 38, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            flex-wrap: wrap;
+            border-radius: 60px;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            border: 1px solid black;
+        }
+
+        #confirmar {
+            width: 200px;
+            height: 50px;
+            margin-top: 30px;
+            background-color: rgb(31, 139, 189);
+            border: 1px solid black;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; 
+            font-size: 1em;
+        }
+
+        #texto {
+            height: 40px;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
     <h1>Capturando valores</h1>
-    Digite seu nome: <input type="text" name="texto" id="texto">
-    <input type="button" value="Confirmar" onclick="calcular()">
-    <div id="res"></div>
+
+
+    
+        <div id="container">
+            <p>Digite seu nome:</p>
+                
+            <input type="text" name="texto" id="texto">
+
+            <input type="button" value="Confirmar" onclick="calcular()" id="confirmar">
+            
+            
+            <div id="res"></div>
+            
+        </div>
+    
+        
 
     <script>
 
@@ -19,13 +82,13 @@
             var res = document.getElementById('res')
             res.innerHTML = `<p>Seu nome é ${nome}!</p>`
 
-            if (nome == 'Raphael') {
-                res.innerHTML += '<p>Parabéns você foi premiado</p>'
+            if (nome == 0 || nome == 0) {
+                res.innerHTML = '<p>Insira um nome</p>'
+            } else if (nome == 'Raphael' || nome == 'raphael'){
+                res.innerHTML += '<p>Você foi premiado</p>'
             } else {
-                res.innerHTML += '<p>Você não foi premiado</p>'
+                res.innerHTML = '<p>Voce nao foi premiado</p>'
             }
-
-        
         }
         
     </script>
